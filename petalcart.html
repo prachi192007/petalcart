@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Multi-Page Navigation Example</title>
+    <style>
+        /* Reset some default styles */
+     body{
+        margin:0;
+        padding:0;
+        display: grid;
+    }
+    nav{
+        overflow:hidden;
+        background-color:rgb(253, 156, 169);
+        width: 100%;
+        margin-left: 0px;
+        
+    }
+    nav ul{
+        float:right;
+        padding-top: 100px;
+    }
+    nav li{
+        margin:10px;
+        color:rgb(6, 0, 7);
+        display: inline-block;
+        
+    }
+    nav li a{
+        align-items:center;
+        padding: 280px;
+        font-size: 100px;
+
+    
+    }
+    nav li a:hover{
+        background-color:rgb(247, 212, 229);
+        color:red;
+    }
+
+      section.home{
+        background-color: rgb(244, 207, 207);
+      }
+      .text{
+        position:absolute;
+        top: 800px;
+        left: 1740px;
+        color:rgb(8, 8, 8);
+        font-size: 170px;
+        border-radius: 8px;
+      }
+      .h1{
+         font-size: 100px;
+      }
+    .button{
+        position: absolute;
+        top:1600px;
+        left:800px;
+        color:rgb(21, 15, 15);
+        background-color: rgb(247, 100, 161);
+        border:none;
+        border-radius:200px ;
+        padding:10px 20px;
+        font-size: 150px;
+      }
+      .button:hover{
+        background-color: rgb(237, 54, 140);
+
+      }
+
+        /* Section Styles */
+        section {
+            
+            min-height: 100vh;
+            display: grid;
+            margin-top: 0%;
+            justify-content: last baseline;
+            align-items: center;
+          
+        }
+
+        
+        .about {
+              margin-left:60px;
+            padding:0;
+            background-color: aliceblue;
+            height: auto;
+        }
+        header{
+            text-align:center;
+            font-size:60px; 
+            background-color:pink;
+
+               }
+        .text1{
+            margin: 10px;
+            font-size: 40px;
+            padding : 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: left;
+            font-size: 90px;
+            width: auto;
+        }
+      
+        h3{
+            color:#333;
+            font-size: 90px;
+        }
+       
+    
+        .product {
+            background-color: #fbe6f2;
+            color: rgb(10, 6, 6);
+            display:block;
+            margin: 10px;
+            text-align: center;
+            padding: 30px;
+            height: auto;
+
+        }
+        .card{
+        border: 1px solid #ccc; padding: 10px; width: 100px; margin: 20px; background: white; border-radius: 50px;display:inline-table;
+        inline-size:1500px;font-size: 90px;text-align: center;
+    
+        }
+         button{
+         background-color: #ff69b4; color: white; border: none; padding: 8px 12px; border-radius: 5px;
+         text-align: center;font-size: 90px;
+         }
+         h2{
+          font-size: 200px;
+          text-align: center;
+         }
+
+      
+        .p {
+            width: 80px;
+            font-size: 100px;
+            margin-bottom: 2rem;
+        }
+        .team{
+            background-color: rgb(248, 217, 235);
+            text-align: center;
+            padding: 0%;
+        }
+
+       .container {
+            max-width: 100000px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            background-color: rgb(253, 216, 230);
+            color: #666;
+          
+        }
+        
+        .team-card {
+             background-color: white;
+            height: 2000px;
+            border-radius: 80px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);   
+        }
+        .team-img {
+            width: 100%;
+            height: 1000px;
+            object-fit:cover;
+        }
+        
+        .team-info {
+            padding: 3rem;
+            text-align: center;
+        }
+        
+        .team-name {
+            color: #ff6b8b;
+            margin-bottom: 0.5rem;
+            font-size: 150px;
+        }
+        
+        .team-title {
+            font-weight: bold;
+            font-size: 80px;
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        h5{
+          font-size: 50px;
+          text-align: center;
+        }
+       .contact{
+          background: #f7def0;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+       }
+          form {
+            max-width: 3500px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input, textarea {
+            font-size: 90px;
+            width: 90%;
+            padding: 20px;
+            margin: 2% 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #f43bc6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ba2c81;
+        }
+        footer{
+            padding: 20px;
+        }
+     
+       
+
+       
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <body>
+        <nav >
+        <img src="C:\Users\Prachi\OneDrive\Desktop\p19\Your paragraph text.png" alt="petalcart" align="center" height:"10%" width:"45px">
+
+            <ul>
+              <li> <a href="#home">home</a></li>
+              <li> <a href="#about">about</a></li>
+              <li> <a href="#product">product</a></li>
+               <li> <a href="#team">team</a></li>
+               <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>      
+ <section id="home" name="home">
+   
+      <img src="C:\Users\Prachi\OneDrive\Pictures\f.jpg"alt="flower" height="3110px"width="6130px">
+      <div class="text"><h1 >fresh flowers for any <br>special occation..</h1><h6>right on time <br>celebrate life with same day delivary</h6>
+      <button class="button">order now </button>
+    </div>
+  </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+    <header>
+    <h2>about us</h2>
+    </header>
+    <div class="text1">
+        <h4>welcome to our flower shop!</h4>
+        <p>at flower petalcart,we believe our that flowers have the power to brighten any day.our journey began in 2010 with a passion for floral design and a commitment to <br>providing the freshest blooms to our customers.</p>
+            
+    <h3>Our Values</h3>
+    <p>We are committed to:</p>
+    <ul>
+        <li><strong>Quality:</strong> We only use the freshest flowers and materials.</li>
+        <li><strong>Sustainability:</strong> We prioritize eco-friendly practices in our sourcing and packaging.</li>
+        <li><strong>Customer Satisfaction:</strong> Your happiness is our top priority, and we strive to exceed your expectations.</li>
+    </ul>
+    <h3>What We Offer</h3>
+    <ul>
+        <li>Weddings</li>
+        <li>Birthdays</li>
+        <li>Anniversaries</li>
+        <li>Funerals</li>
+        <li>Corporate Events</li>
+        <li>Seasonal Arrangements</li>
+    </ul>
+    <p>We invite you to visit our shop or explore our website to discover our latest collections. Thank you for choosing Flower petalcart , where every petal tells a story!</p>
+  </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="product" class="product">
+   
+  <h2 >🌸 petalcart Shop</h2>
+  <h3>Beautiful flowers for every occasion</h3>
+
+  
+  <div class="card">
+
+    <script>
+        function placeorder(){
+            alert("order placed");
+        }
+    </script>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxgcIMi5rNPTC8WrG57U-4TnqYYuK2Jt1fyw&s" alt="Flowers" style="width: 100%; border-radius: 8px;">
+    <h3 >Rose Bouquet</h3>
+    <h4 >Price: ₹499</h4>
+    <button onclick="placeorder()">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://www.fnp.com/images/pr/m/v300/delicate-love-6-pink-roses-bunch.jpg" alt="Flowers" style="width: 100%; border-radius: 8px;">
+    <h3 > pink Rose Bouquet</h3>
+    <h4 >Price: ₹550</h4>
+    <button onclick="placeorder()">Buy Now</button>
+  </div>
+   <div class="card">
+    <img src="https://floweronwheels.com/cdn/shop/products/FOWBU8.jpg?v=1660913875" alt="Flowers" style="width: 100%; border-radius: 8px;">
+    <h3 > mix Rose Bouquet</h3>
+    <h4>Price: ₹699</h4>
+    <button onclick="placeorder()">Buy Now</button>
+  </div>
+ <div class="card">
+    <img src="https://gulmahal.in/wp-content/uploads/2024/10/F0309-1.jpg" alt="Flowers" style="width: 100%; border-radius: 8px;">
+    <h3 >premium mix Rose Bouquet</h3>
+    <h4 >Price: ₹1500</h4>
+    <button onclick="placeorder()">Buy Now</button>
+  </div>
+ <div class="card">
+    <img src="https://floweronwheels.com/cdn/shop/files/images-final---2_500x.jpg?v=1670780110" alt="Flowers" style="width: 100%; border-radius: 8px;">
+    <h3 >rose gift hamper</h3>
+    <h4 >Price: ₹999</h4>
+    <button onclick="placeorder()">Buy Now</button>
+  </div>
+ <div class="card">
+    <img src="https://m.media-amazon.com/images/I/71aznaCPDZL._UF1000,1000_QL80_.jpg" alt="Flowers" style="width: 100%; border-radius: 8px;">
+    <h3 >single white rose flower</h3>
+    <h4 >Price: ₹30</h4>
+    <button onclick="placeorder()" >Buy Now</button>
+  </div>
+    </section>
+
+    <section id="team"class="team">
+        <h2>petalcart Team</h2>
+    <div class="container">
+        <div class="team-card">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e35d09ac-5894-4385-8e8e-fa5267145035.png" alt="sai" class="team-img">
+            <div class="team-info">
+                <h2 class="team-name">sai patil</h2>
+                <h5 class="team-title">Lead Florist</h5>
+                <h5>With 15 years of floral design experience, Sai specializes in rose cultivation and bouquets that wow.</h5>
+            </div>
+        </div>
+        
+        <div class="team-card">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2792d631-0efa-48f6-a834-41bcdf909aeb.png" alt="sahil" class="team-img">
+            <div class="team-info">
+                <h2 class="team-name">sahil mali</h2>
+                <h5 class="team-title">Head Gardener</h5>
+                <h5 >sahil's green thumb has nurtured our gardens for a decade, focusing on tulips and seasonal arrangements.</h5>
+            </div>
+        </div>
+        
+        <div class="team-card">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ffbf7b63-6a3c-4a98-a29e-92df02a39b9a.png" alt="priya" class="team-img">
+            <div class="team-info">
+                <h2 class="team-name">priya mane</h2>
+                <h5 class="team-title">Floral Designer</h5>
+                <h5 >priya brings Latin floral traditions to her work, particularly in lily and orchid compositions.</h5>
+            </div>
+        </div>
+        </div>
+</section>
+<section  id="contact" class="contact">
+   <h2>Contact us</h2>
+    
+   <form>
+        <input type="text" placeholder="Your Name" aria-label="Your Name" required>
+        <input type="email" placeholder="Your Email" aria-label="Your Email" required>
+        <textarea rows="4" placeholder="Your Message" aria-label="Your Message"></textarea>
+        <button onclick="sendMessage()">Send Message</button>
+    </form>
+    <footer>
+        <h3>thank your for visite our site.</h3>
+    </footer>
+</section>
+    <script>
+        // JavaScript to highlight active navigation link
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+
+            window.addEventListener('scroll', function() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
