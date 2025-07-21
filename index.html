@@ -4,7 +4,7 @@
    
     <title>Multi-Page Navigation Example</title>
     <style>
-        /* Reset some default styles */
+        /*styles */
      body{
         margin:0;
         padding:0;
@@ -84,15 +84,15 @@
         .about {
               margin-left:60px;
             padding:0;
-            background-color: aliceblue;
+            background-color: #fbe6f2;
             height: auto;
         }
-        header{
+    /*    header{
             text-align:center;
-            font-size:60px; 
+            font-size:30px; 
             background-color:pink;
 
-               }
+               }*/
         .text1{
             margin: 10px;
             font-size: 40px;
@@ -135,10 +135,10 @@
          }
 
       
-        .p {
-            width: 80px;
-            font-size: 100px;
-            margin-bottom: 2rem;
+        p{
+          
+            font-size: 70px;
+           
         }
         .team{
             background-color: rgb(248, 217, 235);
@@ -225,13 +225,44 @@
         footer{
             padding: 20px;
         }
-     
-       
+        .reviews-container{
+           
+            background-color: #f7e7f2;
+            padding: 0%;
+          
+        }
 
-       
+        .review-card {
+            background:rgb(251, 247, 247);
+            margin-left:100px;
+            margin-right: 100px;
+            padding: 10px;
+           
+            box-shadow: 9px 9px 10px 10px rgba(22, 20, 20, 0.1);
+        }
+
+
+        .reviewer-name {
+            font-weight: bold;
+            font-size: 100px;
+        }
+        .review-date {
+            color: #777;
+            font-size: 70px;
+        }
+        .rating {
+            color: rgb(255, 217, 2);
+            font-size: 70px;
+            margin-bottom: 10px;
+        }
+        .review-text {
+            line-height: 1.5;
+            color: #333;
+        }
+
     </style>
 </head>
-<body>
+
     <!-- Navigation -->
     <body>
         <nav >
@@ -239,51 +270,25 @@
 
             <ul>
               <li> <a href="#home">home</a></li>
-              <li> <a href="#about">about</a></li>
+             
               <li> <a href="#product">product</a></li>
-               <li> <a href="#team">team</a></li>
+               <li> <a href="#about">about</a></li>
+               <li><a href="#reviews-container">review</a></li>
                <li><a href="#contact">contact</a></li>
             </ul>
+            <li></li>
         </nav>      
  <section id="home" name="home">
    
       <img src="C:\Users\Prachi\OneDrive\Pictures\f.jpg"alt="flower" height="3110px"width="6130px">
-      <div class="text"><h1 >fresh flowers for any <br>special occation..</h1><h6>right on time <br>celebrate life with same day delivary</h6>
+      <div class="text"> <h1>fresh flowers for any <br>special occation..</h1><h6>right on time <br>celebrate life with same day delivary</h6>
+        <a href="file:///C:/Users/Prachi/OneDrive/Desktop/p19/flower.html#product">
       <button class="button">order now </button>
+      </a>
+      
     </div>
   </section>
-
-
-    <!-- About Section -->
-    <section id="about" class="about">
-    <header>
-    <h2>about us</h2>
-    </header>
-    <div class="text1">
-        <h4>welcome to our flower shop!</h4>
-        <p>at flower petalcart,we believe our that flowers have the power to brighten any day.our journey began in 2010 with a passion for floral design and a commitment to <br>providing the freshest blooms to our customers.</p>
-            
-    <h3>Our Values</h3>
-    <p>We are committed to:</p>
-    <ul>
-        <li><strong>Quality:</strong> We only use the freshest flowers and materials.</li>
-        <li><strong>Sustainability:</strong> We prioritize eco-friendly practices in our sourcing and packaging.</li>
-        <li><strong>Customer Satisfaction:</strong> Your happiness is our top priority, and we strive to exceed your expectations.</li>
-    </ul>
-    <h3>What We Offer</h3>
-    <ul>
-        <li>Weddings</li>
-        <li>Birthdays</li>
-        <li>Anniversaries</li>
-        <li>Funerals</li>
-        <li>Corporate Events</li>
-        <li>Seasonal Arrangements</li>
-    </ul>
-    <p>We invite you to visit our shop or explore our website to discover our latest collections. Thank you for choosing Flower petalcart , where every petal tells a story!</p>
-  </div>
-    </section>
-
-    <!-- Products Section -->
+     <!-- Products Section -->
     <section id="product" class="product">
    
   <h2 >🌸 petalcart Shop</h2>
@@ -333,13 +338,56 @@
     <h4 >Price: ₹30</h4>
     <button onclick="placeorder()" >Buy Now</button>
   </div>
+  <div class="card">
+    <img src="https://imgcdn.floweraura.com/vintage-dreams-of-velvet-petals-9743550flm-A_0.jpg" alt="Flowers" style="width: 100%; border-radius: 8px;">
+    <h3 >pink-white rose flower</h3>
+    <h4 >Price: ₹300</h4>
+    <button onclick="placeorder()" >Buy Now</button>
+</div>
+    <div class="card">
+    <img src="https://media.wishque.com/data/images/products/12869/thumbnail/56155946_316935723854_0.18091500-1749638722.jpg" alt="Flowers" style="width: 100%; border-radius: 8px;">
+    <h3 >red rose flower</h3>
+    <h4 >Price: ₹450</h4>
+    <button onclick="placeorder()" >Buy Now</button>
+  </div>
+  <div class="card">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/71-MIXs6jNL._AC_UL210_SR210,210_.jpg" alt="Flowers" style="width: 100%; border-radius: 8px;">
+    <h3 >pink rose gift hamper</h3>
+    <h4 >Price: ₹899</h4>
+    <button onclick="placeorder()" >Buy Now</button>
+  </div>
+  </div>
     </section>
 
-    <section id="team"class="team">
-        <h2>petalcart Team</h2>
+    <!-- About Section -->
+    <section id="about" class="about">
+    
+    <h2>about us</h2>
+    
+    <div class="text1">
+        <h4>welcome to our flower shop!</h4>
+        <p>at flower petalcart,we believe our that flowers have the power to brighten any day.our journey began in 2010 with a passion for floral design and a commitment to <br>providing the freshest blooms to our customers.</p>
+            
+    <h3>Our Values</h3>
+    <p>We are committed to:</p>
+    <ul>
+        <li><strong>Quality:</strong> We only use the freshest flowers and materials.</li>
+        <li><strong>Sustainability:</strong> We prioritize eco-friendly practices in our sourcing and packaging.</li>
+        <li><strong>Customer Satisfaction:</strong> Your happiness is our top priority, and we strive to exceed your expectations.</li>
+    </ul>
+    <h3>What We Offer</h3>
+    <ul>
+        <li>Weddings</li>
+        <li>Birthdays</li>
+        <li>Anniversaries</li>
+        <li>Funerals</li>
+        <li>Corporate Events</li>
+        <li>Seasonal Arrangements</li>
+    </ul>
+       <h2>Team</h2>
     <div class="container">
         <div class="team-card">
-            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e35d09ac-5894-4385-8e8e-fa5267145035.png" alt="sai" class="team-img">
+            <img src="https://media.istockphoto.com/id/1162196281/photo/florist-watering-flower-plants.jpg?s=612x612&w=0&k=20&c=iO2yTpYh8Tu5Ij0kbpExsC0pLHTrWdVqpVG81Zxdp8g=" alt="sai" class="team-img">
             <div class="team-info">
                 <h2 class="team-name">sai patil</h2>
                 <h5 class="team-title">Lead Florist</h5>
@@ -348,7 +396,7 @@
         </div>
         
         <div class="team-card">
-            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2792d631-0efa-48f6-a834-41bcdf909aeb.png" alt="sahil" class="team-img">
+            <img src="https://media.istockphoto.com/id/589136876/photo/woman-buying-a-bouquet-of-flower.jpg?s=612x612&w=0&k=20&c=3iGlC4wyEvuHnfVtyEK32tk1Xl0iiQqYJ9d1VQF37YE=" alt="sahil" class="team-img">
             <div class="team-info">
                 <h2 class="team-name">sahil mali</h2>
                 <h5 class="team-title">Head Gardener</h5>
@@ -365,45 +413,76 @@
             </div>
         </div>
         </div>
-</section>
+    </section>
+
+
+      <section id="reviews-container"class="reviews-container">
+        <h2>reviews</h2>
+        <div class="review-card">
+            <div class="review-header">
+                <div class="reviewer-name">Alex Johnson</div>
+                <div class="review-date">March 15, 2024</div>
+            </div>
+            <div class="rating">★★★★★</div>
+            <div class="review-text">
+               <p> This product exceeded my expectations! The quality is outstanding and it arrived sooner than expected.</p>
+            </div>
+        </div>
+        
+        <div class="review-card">
+            <div class="review-header">
+                <div class="reviewer-name">Sarah Miller</div>
+                <div class="review-date">February 28, 2024</div>
+            </div>
+            <div class="rating">★★★★☆</div>
+            <div class="review-text">
+              <p>  Very good product overall. The only thing I'd improve is the packaging - mine arrived slightly damaged.</p>
+            </div>
+        </div>
+         <div class="review-card">
+            <div class="review-header">
+                <div class="reviewer-name">radha pawar</div>
+                <div class="review-date">jan 30, 2024</div>
+            </div>
+            <div class="rating">★★★★☆</div>
+            <div class="review-text">
+              <p>  Very good product overall. quality is best ,i like the delivery service.</p>
+            </div>
+        </div>
+    </section>
+  
+ 
+    
 <section  id="contact" class="contact">
+    
+    <script>
+    function sendToWhatsApp() {
+      var name = document.getElementById("name").value;
+      var name = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      // Replace with your WhatsApp number (use country code, no + or 0)
+      var phoneNumber = "8999512123";
+      
+      var url = "https://wa.me/8999512123?text=" 
+          + encodeURIComponent("Hello, my name is " + name +"<br>"+message);
+
+
+      window.open(url, '_Self');
+    }
+  </script>
    <h2>Contact us</h2>
     
-   <form>
-        <input type="text" placeholder="Your Name" aria-label="Your Name" required>
-        <input type="email" placeholder="Your Email" aria-label="Your Email" required>
-        <textarea rows="4" placeholder="Your Message" aria-label="Your Message"></textarea>
+   <form onsubmit="sendToWhatsApp(); return false;">
+        <input type="text" id="name"placeholder=" name" aria-label=" name" required>
+        <input id="email" placeholder=" email" aria-label=" email" required>
+        <textarea id="message"placeholder=" Message" aria-label="Message"></textarea>
         <button onclick="sendMessage()">Send Message</button>
     </form>
     <footer>
         <h3>thank your for visite our site.</h3>
     </footer>
 </section>
-    <script>
-        // JavaScript to highlight active navigation link
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-links a');
-
-            window.addEventListener('scroll', function() {
-                let current = '';
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href').includes(current)) {
-                        link.classList.add('active');
-                    }
-                });
-            });
-        });
-    </script>
+   
 </body>
 </html>
