@@ -3,214 +3,197 @@
 <head>
    
     <title>petalcart shop</title>
-   <style>
-        /*styles */
-     body{
-        margin:0;
-        padding:0;
-        display: grid;
-    }
-    nav{
-        overflow:hidden;
-        background-color:rgb(253, 156, 169);
-        width: 100%;
-        margin-left: 0px;
-        
-    }
-    nav ul{
-        float:right;
-        padding-top: 100px;
-    }
-    nav li{
-        margin:10px;
-        color:rgb(6, 0, 7);
-        display: inline-block;
-        
-    }
-    nav li a{
-        align-items:center;
-        padding: 280px;
-        font-size: 100px;
-
-    
-    }
-    nav li a:hover{
-        background-color:rgb(247, 212, 229);
-        color:red;
-    }
-
-      section.home{
-        background-color: rgb(244, 207, 207);
-      }
-      .text{
-        position:absolute;
-        top: 800px;
-        left: 1740px;
-        color:rgb(8, 8, 8);
-        font-size: 170px;
-        border-radius: 8px;
-      }
-      .h1{
-         font-size: 100px;
-      }
-    .button{
-        position: absolute;
-        top:1600px;
-        left:800px;
-        color:rgb(21, 15, 15);
-        background-color: rgb(247, 100, 161);
-        border:none;
-        border-radius:200px ;
-        padding:10px 20px;
-        font-size: 150px;
-      }
-      .button:hover{
-        background-color: rgb(237, 54, 140);
-
-      }
-
-        /* Section Styles */
-        section {
-            
-            min-height: 100vh;
-            display: grid;
-            margin-top: 0%;
-            justify-content: last baseline;
+<style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-          
+            background-color: #f7f7f7;
         }
 
-        
-        .about {
-              margin-left:60px;
-            padding:0;
+        nav {
+            width: 100%;
+            background-color: rgb(253, 156, 169);
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav li a {
+            color: rgb(6, 0, 7);
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav li a:hover {
+            background-color: rgb(247, 212, 229);
+            color: red;
+        }
+
+        /* Home Section */
+        section.home {
+            background-color: rgb(244, 207, 207);
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .text h1 {
+            font-size: 2em;
+            color: rgb(8, 8, 8);
+        }
+
+        .text h6 {
+            font-size: 1.2em;
+            color: rgb(8, 8, 8);
+        }
+
+        .button {
+            background-color: rgb(247, 100, 161);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: rgb(237, 54, 140);
+        }
+
+        /* Product Section */
+        section.product {
             background-color: #fbe6f2;
-            height: auto;
+            padding: 50px 20px;
+            text-align: center;
         }
-    /*    header{
-            text-align:center;
-            font-size:30px; 
-            background-color:pink;
 
-               }*/
-        .text1{
+        h2, h3 {
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
             margin: 10px;
-            font-size: 40px;
-            padding : 20px;
+            background: white;
+            border-radius: 10px;
+            display: inline-block;
+            width: calc(45% - 20px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: left;
-            font-size: 90px;
-            width: auto;
         }
-      
-        h3{
-            color:#333;
-            font-size: 90px;
+
+        .card h3 {
+            font-size: 1.2em;
         }
-       
-    
-        .product {
-            background-color: #fbe6f2;
-            color: rgb(10, 6, 6);
-            display:block;
-            margin: 10px;
+
+        .card h4 {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* About Section */
+        section.about {
+            padding: 50px 20px;
             text-align: center;
-            padding: 30px;
-            height: auto;
-
-        }
-        .card{
-        border: 1px solid #ccc; padding: 10px; width: 100px; margin: 20px; background: white; border-radius: 50px;display:inline-table;
-        inline-size:1500px;font-size: 90px;text-align: center;
-    
-        }
-         button{
-         background-color: #ff69b4; color: white; border: none; padding: 8px 12px; border-radius: 5px;
-         text-align: center;font-size: 90px;
-         }
-         h2{
-          font-size: 200px;
-          text-align: center;
-         }
-
-      
-        p{
-          
-            font-size: 70px;
-           
-        }
-        .team{
-            background-color: rgb(248, 217, 235);
-            text-align: center;
-            padding: 0%;
         }
 
-       .container {
-            max-width: 100000px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            background-color: rgb(253, 216, 230);
-            color: #666;
-          
+        .text1 {
+            margin: 20px;
+            font-size: 1em;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
+        /* Team Section */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
         .team-card {
-             background-color: white;
-            height: 2000px;
-            border-radius: 80px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);   
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
         }
+
         .team-img {
             width: 100%;
-            height: 1000px;
-            object-fit:cover;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
         }
-        
-        .team-info {
-            padding: 3rem;
-            text-align: center;
-        }
-        
+
         .team-name {
             color: #ff6b8b;
-            margin-bottom: 0.5rem;
-            font-size: 150px;
+            font-size: 1.5em;
         }
-        
+
         .team-title {
             font-weight: bold;
-            font-size: 80px;
-            margin-bottom: 1rem;
             color: #666;
         }
-        h5{
-          font-size: 50px;
-          text-align: center;
-        }
-       .contact{
-          background: #f7def0;
-            margin: 0;
-            padding: 20px;
+
+        /* Contact Section */
+        section.contact {
+            background: #f7def0;
+            padding: 50px 20px;
             text-align: center;
-       }
-          form {
-            max-width: 3500px;
+        }
+
+        form {
+            max-width: 500px;
             margin: 0 auto;
             background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        input, textarea {
-            font-size: 90px;
-            width: 90%;
             padding: 20px;
-            margin: 2% 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input, textarea {
+            font-size: 1em;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
             border: 1px solid #ddd;
             border-radius: 5px;
         }
+
         button {
             background: #f43bc6;
             color: white;
@@ -218,48 +201,75 @@
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 1em;
         }
+
         button:hover {
             background: #ba2c81;
         }
-        footer{
-            padding: 20px;
-        }
-        .reviews-container{
-           
+
+        /* Reviews Section */
+        section.reviews-container {
             background-color: #f7e7f2;
-            padding: 0%;
-          
+            padding: 50px 20px;
         }
 
         .review-card {
-            background:rgb(251, 247, 247);
-            margin-left:100px;
-            margin-right: 100px;
-            padding: 10px;
-           
-            box-shadow: 9px 9px 10px 10px rgba(22, 20, 20, 0.1);
+            background: rgb(251, 247, 247);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-
 
         .reviewer-name {
             font-weight: bold;
-            font-size: 100px;
-        }
-        .review-date {
-            color: #777;
-            font-size: 70px;
-        }
-        .rating {
-            color: rgb(255, 217, 2);
-            font-size: 70px;
-            margin-bottom: 10px;
-        }
-        .review-text {
-            line-height: 1.5;
-            color: #333;
+            font-size: 1.2em;
         }
 
+        .review-date {
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        .rating {
+            color: rgb(255, 217, 2);
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .card {
+                width: calc(100% - 40px);
+            }
+
+            nav li a {
+                font-size: 14px;
+            }
+
+            .button {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav li a {
+                font-size: 12px;
+            }
+
+            .button {
+                font-size: 0.8em;
+            }
+
+            .text h1 {
+                font-size: 1.5em;
+            }
+
+            .text h6 {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 
