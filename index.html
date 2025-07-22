@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head <meta name="viewport" content="width=device-width, initial-scale=1.0">>
    
     <title>Multi-Page Navigation Example</title>
     <style>
@@ -147,7 +147,8 @@
         }
 
        .container {
-            max-width: 100000px;
+          width:100%;
+            max-width: 1000px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
@@ -259,6 +260,13 @@
             line-height: 1.5;
             color: #333;
         }
+       @media(max-width:768px){
+.container{
+   padding:10px;
+   font-size:14px;
+}
+}
+   
 
     </style>
 </head>
@@ -266,7 +274,7 @@
     <!-- Navigation -->
     <body>
         <nav >
-        <img src="https://github.com/prachi192007/petalcart/blob/main/Your%20paragraph%20text.png?raw=true" alt="petalcart" align="center" height:"10%" width:"45px">
+        <img src="https://github.com/prachi192007/petalcart/blob/main/Your%20paragraph%20text.png?raw=true" alt="petalcart" align="center" height:"auto" width:"45px">
 
             <ul>
               <li> <a href="#home">home</a></li>
@@ -280,7 +288,7 @@
         </nav>      
  <section id="home" name="home">
    
-      <img src="https://github.com/prachi192007/petalcart/blob/main/f.jpg?raw=true"alt="flower" height="3110px"width="6130px">
+      <img src="https://github.com/prachi192007/petalcart/blob/main/f.jpg?raw=true"alt="flower" height="auto"width="100%">
       <div class="text"> <h1>fresh flowers for any <br>special occation..</h1><h6>right on time <br>celebrate life with same day delivary</h6>
         <a href="file:///C:/Users/Prachi/OneDrive/Desktop/p19/petalcart.html#product">
       <button class="button">order now </button>
