@@ -455,17 +455,21 @@
     
 <section  id="contact" class="contact">
     
-    <script>
+  <script>
     function sendToWhatsApp() {
       var name = document.getElementById("name").value;
-      var name = document.getElementById("email").value;
+      var email = document.getElementById("email").value;
       var message = document.getElementById("message").value;
 
       // Replace with your WhatsApp number (use country code, no + or 0)
       var phoneNumber = "+918999512123";
       
       var url = "https://wa.me/+918999512123?text=" 
-          + encodeURIComponent("Hello, my name is " +name +","+email +"."+message);
+          + encodeURIComponent("...petalcart ...\n\n" +
+          "i am "+name +"\n"+
+          "my  Email is:"+email+"\n"+
+          "message:"+message+"\n"
+          );
 
 
       window.open(url, '_Self');
