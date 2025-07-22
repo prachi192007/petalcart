@@ -465,10 +465,10 @@
       var phoneNumber = "+918999512123";
       
       var url = "https://wa.me/+918999512123?text=" 
-          + encodeURIComponent("...petalcart ...\n\n" +
+          + encodeURIComponent("\n" +
           "i am "+name +"\n"+
-          "my  Email is:"+email+"\n"+
-          "message:"+message+"\n"
+          "my  Email is: "+email+"\n"+
+          "message: "+message+"\n"
           );
 
 
@@ -480,7 +480,7 @@
    <form onsubmit="sendToWhatsApp(); return false;">
         <input type="text" id="name"placeholder=" name" aria-label=" name" required>
         <input id="email" placeholder=" email" aria-label=" email" required>
-        <textarea id="message"placeholder="  message" aria-label="message"></textarea>
+        <textarea id="message"placeholder="message" aria-label="message"></textarea>
         <button onclick="sendMessage()">Send Message</button>
     </form>
     <footer>
