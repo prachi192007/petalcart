@@ -1,509 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
-<head <meta name="viewport" content="width=device-width, initial-scale=1.0">>
-   
-    <title>petalcart shop</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase</title>
     <style>
-        /*styles */
-     body{
-        margin:0;
-        padding:0;
-        display:grid;
-    }
-    nav{
-        overflow:hidden;
-        background-color:rgb(253, 156, 169);
-        width: 100%;
-        margin-left: 0px;
-        display:flex;
-        justify-content:space-between;
-       z-index:1000;
-       position:sticky;
-    }
-    nav ul{
-        float:right;
-        padding-top: 70px;
-    }
-    nav li{
-        display:inline-block;
-        margin:0px;
-        color:rgb(6, 0, 7);
-        
-        
-    }
-    nav li a{
-        align-items:center;
-        padding: 10px 20px;
-        font-size: 50px;
-    }
-    nav li a:hover{
-        background-color:rgb(247, 212, 229);
-        color:red;
-    }
-
-      .home{
-         position:relative;
-         z-index:1;
-         top:10%;
-         transform:translatey(-30%);
-         max-width:100%;
-         padding:0 50px;
-        background-color: rgb(244, 207, 207);
-         img-size:cover;
-      }
-       .text{
-        position:absolute;
-        top: 600px;
-        left: 200px;
-        color:rgb(8, 8, 8);
-        font-size: 170px;
-        border-radius: 8px;
-      }
-      .h1{
-         font-size: 100px;
-      }
-    .button{
-        position: absolute;
-        top:900px;
-        left:1000px;
-        color:rgb(21, 15, 15);
-        background-color: rgb(247, 100, 161);
-        border:none;
-        border-radius:60px ;
-        padding:30px 60px;
-        font-size: 60px;
-       curser:pointer;
-       transition:0.3s ease;
-      }
-      .button:hover{
-        background-color: rgb(237, 54, 140);
-
-      }
-
-        /* Section Styles */
-        section {
-            
-            min-height: 70vh;
-            display: grid;
-            margin-top: 0%;
-            justify-content: last baseline;
-            align-items: center;
-          
-        }
-
-        
-        .about {
-              margin-left:60px;
-            padding:0;
-            background-color: #fbe6f2;
-            height: auto;
-        }
-    /*    header{
-            text-align:center;
-            font-size:30px; 
-            background-color:pink;
-
-               }*/
-        .text1{
-            margin: 10px;
-            font-size: 40px;
-            padding : 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: left;
-            font-size: 90px;
-            width: auto;
-        }
-      
-        h3{
-            color:#333;
-            font-size: 90px;
-        }
-       
-    
-        .product {
-            background-color: #fbe6f2;
-            color: rgb(10, 6, 6);
-            display:block;
-            margin: 10px;
-            text-align: center;
-            padding: 30px;
-            height: auto;
-
-        }
-        .card{
-        border: 1px solid #ccc; padding: 10px; width: 100px; margin: 20px; background: white; border-radius: 50px;display:inline-table;
-        inline-size:1500px;font-size: 90px;text-align: center;
-    
-        }
-         button{
-         background-color: #ff69b4; color: white; border: none; padding: 8px 12px; border-radius: 5px;
-         text-align: center;font-size: 90px;
-         }
-         h2{
-          font-size: 200px;
-          text-align: center;
-         }
-
-      
-        p{
-          
-            font-size: 70px;
-           
-        }
-        .team{
-            background-color: rgb(248, 217, 235);
-            text-align: center;
-            padding: 0%;
-        }
-
-       .container {
-          width:100%;
-            max-width: 1000px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            background-color: rgb(253, 216, 230);
-            color: #666;
-            height:auto;
-        }
-        
-        .team-card {
-             background-color: white;
-            height: 2000px;
-            border-radius: 80px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);   
-        }
-        .team-img {
-            width: 100%;
-            height: 1000px;
-            object-fit:cover;
-        }
-        
-        .team-info {
-            padding: 3rem;
-            text-align: center;
-        }
-        
-        .team-name {
-            color: #ff6b8b;
-            margin-bottom: 0.5rem;
-            font-size: 100px;
-        }
-        
-        .team-title {
-            font-weight: bold;
-            font-size: 80px;
-            margin-bottom: 1rem;
-            color: #666;
-        }
-        h5{
-          font-size: 50px;
-          text-align: center;
-        }
-       .contact{
-          background: #f7def0;
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 20px;
-            text-align: center;
-       }
-          form {
-            max-width: 3500px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 0;
+            font-family: Arial, sans-serif;
         }
-        input, textarea {
-            font-size: 90px;
-            width: 90%;
-            padding: 20px;
-            margin: 2% 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+
+        body {
+            background: #f8f8f8;
         }
-        button {
-            background: #f43bc6;
+
+        header {
+            background-color: #f28075;
             color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #ba2c81;
-        }
-        footer{
-            padding: 20px;
-        }
-        .reviews-container{
-           
-            background-color: #f7e7f2;
-            padding: 0%;
-          
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
-        .review-card {
-            background:rgb(251, 247, 247);
-            margin-left:100px;
-            margin-right: 100px;
-            padding: 10px;
-           
-            box-shadow: 9px 9px 10px 10px rgba(22, 20, 20, 0.1);
+        header h1 {
+            font-size: 1.8em;
         }
 
-
-        .reviewer-name {
+        nav a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
             font-weight: bold;
-            font-size: 100px;
         }
-        .review-date {
-            color: #777;
-            font-size: 70px;
-        }
-        .rating {
-            color: rgb(255, 217, 2);
-            font-size: 70px;
-            margin-bottom: 10px;
-        }
-        .review-text {
-            line-height: 1.5;
-            color: #333;
-        }
-       @media(max-width:768px){
-.container{
- 
-}
- 
-   
-}
-   
+        nav  a:hover{
+        background-color:rgb(245, 241, 240);
+       
+    }
 
+        nav {
+            overflow:hidden;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+        .home h2 {
+            font-size: 2em;
+        }
+        .home {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 60px;
+        }
+
+        .home h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .home p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        
+        .search-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 100px auto;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .search-box:focus {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+       
+       
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            
+        }
+
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .product button {
+            background-color: #ff6f61;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+         .product button:hover{
+            background-color:rgb(249, 68, 18)
+
+         }
+ .shop {
+      display: flex;
+      justify-content: space-around;
+      padding: 30px;
+      flex-wrap: wrap;
+    }
+
+    .item {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+     .butt{
+    background-color:rgb(10, 200, 10);
+    color:white;
+    border-radius: 10px;
+
+   }
+   .butt:hover{
+    background-color:green ;
+   }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        
+     .blink {
+      font-size: 24px;
+      color: red;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+        /* Responsive nav stacking */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                margin-top: 10px;
+                width: 100%;
+                justify-content: space-around;
+            }
+        }
     </style>
 </head>
+<body>
 
-    <!-- Navigation -->
-    <body>
-        <nav >
-        <img src="https://github.com/prachi192007/petalcart/blob/main/Your%20paragraph%20text.png?raw=true" alt="petalcart" height:"auto" width:"2px">
+    <header>
+        <img src="C:\Users\Prachi\Downloads\shopEase.png" alt="petalcart" height="80px" width="auto" >
+        <h1>ShopEase</h1>
+        <nav>
+            
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="file:///C:/Users/Prachi/OneDrive/Desktop/project/about.html">about</a>
+            <a href="file:///C:/Users/Prachi/OneDrive/Desktop/project/cart.html">Cart</a>
+            <a href="file:///C:/Users/Prachi/OneDrive/Desktop/project/contact.html#">Contact</a>
+        </nav>
+        
+    </header>
+     
 
-            <ul>
-              <li> <a href="#home">home</a></li>
-             
-              <li> <a href="#product">product</a></li>
-               <li> <a href="#about">about</a></li>
-               <li><a href="#reviews-container">review</a></li>
-               <li><a href="#contact">contact</a></li>
-            </ul>
-            <li></li>
-        </nav>      
- <section id="home" name="home">
-      <img src="https://github.com/prachi192007/petalcart/blob/main/f.jpg?raw=true"alt="flower" height="auto" width="100%" object-fit="cover">
-         <div class="text"> <h6>fresh flowers for any <br>special occation..</h6>
-        <a href="https://prachi192007.github.io/petalcart/#product">
-      <button class="button">order now </button>
-      </a> 
-  </section>
-     <!-- Products Section -->
-    <section id="product" class="product">
-   
-  <h2 >🌸 petalcart Shop</h2>
-  <h3>Beautiful flowers for every occasion</h3>
+    <section class="home" id="home">
+       
+        
+        <h2 class="blink">Shop the Latest Trends!</h2>
+         <p>Discover our exclusive collection of fashion and accessories</p>
+         <a href="file:///C:/Users/Prachi/OneDrive/Desktop/project/shop.html#products">
+        <button class="btn">Shop Now</button>
+        </a>
 
-  
-  <div class="card">
+    </section>
 
-    <script>
+    <section class="products" id="products">
+        <div class="product">
+            <img src="https://img.freepik.com/free-photo/cute-woman-bright-hat-purple-blouse-is-leaning-stand-with-dresses-posing-with-package-isolated-background_197531-17610.jpg" alt="product">
+            <h3>Women</h3>
+            <a href="file:///C:/Users/Prachi/OneDrive/Desktop/project/women.html">
+            <button class="button1" >Explore</button>
+            </a>
+        </div>
+        <div class="product">
+            <img src="https://t3.ftcdn.net/jpg/03/34/79/68/360_F_334796865_VVTjg49nbLgQPG6rgKDjVqSb5XUhBVsW.jpg" alt="Product 2">
+            <h3>Men</h3>
+            <a href="file:///C:/Users/Prachi/OneDrive/Desktop/project/men's.html">
+            <button>Explore</button>
+            </a>
+        </div>
+        <div class="product">
+            <img src="https://t4.ftcdn.net/jpg/01/16/04/51/360_F_116045111_dcDqeZQfWdqeUlV0eKDxclQCcjbh5cbZ.jpg" alt="pic">
+            <h3>kid's </h3>
+            <a href="file:///C:/Users/Prachi/OneDrive/Desktop/project/children.html">
+            <button>Explore</button>
+            </a>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUMzJ31yxV5eDSQcSNWR1N8jhfa0JRzVH02Q&s"alt="Product 4">
+            <h3>Makeup</h3>
+            <a href="file:///C:/Users/Prachi/OneDrive/Desktop/project/beauty_product.html">
+            <button>Explore</button>
+            </a>
+        </div>
+    </section>
+    <div class="shop" id="shop">
+         <script>
         function placeorder(){
             alert("order placed");
         }
     </script>
+    <div class="item">
+      <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSjBv4j8drA-09_GMJAVluH8uKvOUwVa53OeCLaS-SRCSNbO7IPNc5b2yYqU8eovZNfq4OHW1ZE5p6HNLsmNLdO2Lh4_rPHRw" alt="dog">
+      <h3>German Shepherd</h3>
+      <p>₹2000</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS-zhrqeEtIyoT7huP09AKmQjvrunGSns7dszA7ioleyNYP0hgInWCI1cLwwLaxx0s5oXvWCziZ2QrHMd7ew8-x9xLsAZM-Ux4TmEmcqFEriLs6Z_Vvn64y" alt="a">
+      <h3>Bulldog</h3>
+      <p>₹3000</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRskJxJq0WGQ6MldXZfA4Cf-v6nYykC_lNmF9rJP6_xV--t44L5hzMbyiTwzaju604Cep1NcV-6tJvkalyjfzCFzoQ0bl9ZdwFtXW1qcDh8XjefLDRorBCt2Q" alt="b">
+      <h3>round cut embrodary dress</h3>
+      <p>₹800</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQSq0ar18c9tRLZTIbod02cjZm70OKdDylQr5jBve8kiUCelB4QjZTrgmdCg9PVkua0cXBZAiB4J_iKPDeae2Wm5Fg0lBtmrw" alt="d">
+      <h3>new embrodary kurti</h3>
+      <p>₹350</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRD7TtXrUkuHzJsJWRQ1UC_rkefWzszYZu4zakash87NJaryy6ucHVedVakpChmCKggzUp1iHlPZ6JQgAs_IRZZwTxxUQgG60mpvGGMeaCS5L9ku6u0zg-GeQ" alt="s">
+      <h3> striped aline dress</h3>
+      <p>₹900</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRs8JrDECW5aTOY3dbOzDJ2f93KqLUT2fywhQ92G61pogDcz3T5LsnBPZKPWWgHbgZdPpg0RCxRvmf_Q-upESzgLTMv0uRwMM_dZj8GAiNgSgLUJ6Dvnx6I" alt="dog">
+      <h3> casual black shirt</h3>
+      <p>₹1000</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQc5nfs-XBfTnGmploJVwUpZnKcVG1XHowYF-Xg2ct0bNTl-XeS" alt="a">
+      <h3>formal pant </h3>
+      <p>₹2000</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTyaEVW4KbcMX2x4nwJnC9IVHAUhTXxCVbAtsH1rvjCXaZDr2NEmWjrN-bTG6gnW4A_acAsS7apwdv5T7gr6P7M_rj6vGaVfQVBKIsP1q1x" alt="o">
+           <h3> swiss beauty blush</h3>
+      <p>₹200</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
+     <div class="item">
+      <img src=" https://s2.r29static.com/bin/entry/44e/720x1080,85/1783544/image.webp" alt="g">
+           <h3>mac foundation</h3>
+      <p>2000</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSXxC2Z38TSVczR6MHT-0dEM84bVU-mJDxsQZHa9f53GXdPW4X2iBIY11blPAdfKe91ArS_wgD9dSO_3bG76wnTekiDyOv9dZuO_3M_etYLj6-b6LjcbRL1" alt="dog">
+           <h3>casual top trouser</h3>
+      <p>₹1300</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRjXIXLpjyoQ1jON6NujUgs5NP5iYDR3nYJ7-O5PfRURTqnGwX-foOmT1ICc66KBQ9r90S3xZm60hpY69dQB72ooUqgzLz4yQBPhnGiTUaLNtMh5ol-aPbx" alt="a">
+           <h3>girl dress</h3>
+      <p>₹1800</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQnHrm0SSG5pTtNFbgz4xHD491PGySFInm3XJ3LqhduRkORqpAjNZpA4ZLQLmQvkJ91npaw_XqWMWTebWB3nzpDMb6FmWP69ZSXIbVu28hqSMXoBz2wAHCdBA" alt="a">
+           <h3>classic women formal shirt</h3>
+      <p>₹1000</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSZBHfj82PPRCFKQSZSGEODi-y3MTiljT_CGh3nsPKWxSidI3ptt7-n2WLnwsDZESnrJw8TAjebpA4dChZaKbrhCkVgSRAg7tHoYZ3qdFY10huzrZ4XSVr7ew" alt="a">
+           <h3>short black dress</h3>
+      <p>₹1000</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSC4Cem0-_kVFs_Fv4xqnNtnoMizq9qdTu4ZOD4kF0CzJNYMoM_5nzvM437LyhV8P9zbSwsoU9QvYqTRsHNLJtSdoKpSvQR56-llS9pxF6lkMRKUvo938zgKT4" alt="a">
+           <h3>Westside Maroon Solid Shirt Dress with Belt</h3>
+      <p>₹1400</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTaaSclr5qrAhYm-FrD6tvHABEGLb-ULRAV1S1RdKHozBO5cgTKzZOmdBraf7Kl00o_gCDwInVPSYQsapS5x4B4unHhDK8TQmtecRJSRjn3as4AwRqcxtI4" alt="a">
+           <h3>H&M Ladies Draped Dress</h3>
+      <p>₹900</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
+     <div class="item">
+      <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRKvqNdRvZpt5ATZ3-kQpi6OFwTqa-QiUG6IpyPDAkKxm_SB_0DnaUD4pJNrhXVzhcDy4otlZrpeyFx7w8GdrCXYgfMVTEIWGFnsiEW08uZrCmI45ox8E7S" alt="a">
+           <h3> Boys Blue Clothing Set </h3>
+      <p>₹900</p>
+       <button class="butt"onclick="placeorder()">Order Now</button>
+    </div>
 
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxgcIMi5rNPTC8WrG57U-4TnqYYuK2Jt1fyw&s" alt="Flowers" style="width: 100%; border-radius: 8px;">
-    <h3 >Rose Bouquet</h3>
-    <h4 >Price: ₹499</h4>
-    <button onclick="placeorder()">Buy Now</button>
   </div>
-   <div class="card">
-    <img src="https://www.fnp.com/images/pr/m/v300/delicate-love-6-pink-roses-bunch.jpg" alt="Flowers" style="width: 100%; border-radius: 8px;">
-    <h3 > pink Rose Bouquet</h3>
-    <h4 >Price: ₹550</h4>
-    <button onclick="placeorder()">Buy Now</button>
-  </div>
-   <div class="card">
-    <img src="https://floweronwheels.com/cdn/shop/products/FOWBU8.jpg?v=1660913875" alt="Flowers" style="width: 100%; border-radius: 8px;">
-    <h3 > mix Rose Bouquet</h3>
-    <h4>Price: ₹699</h4>
-    <button onclick="placeorder()">Buy Now</button>
-  </div>
- <div class="card">
-    <img src="https://gulmahal.in/wp-content/uploads/2024/10/F0309-1.jpg" alt="Flowers" style="width: 100%; border-radius: 8px;">
-    <h3 >premium mix Rose Bouquet</h3>
-    <h4 >Price: ₹1500</h4>
-    <button onclick="placeorder()">Buy Now</button>
-  </div>
- <div class="card">
-    <img src="https://floweronwheels.com/cdn/shop/files/images-final---2_500x.jpg?v=1670780110" alt="Flowers" style="width: 100%; border-radius: 8px;">
-    <h3 >rose gift hamper</h3>
-    <h4 >Price: ₹999</h4>
-    <button onclick="placeorder()">Buy Now</button>
-  </div>
- <div class="card">
-    <img src="https://m.media-amazon.com/images/I/71aznaCPDZL._UF1000,1000_QL80_.jpg" alt="Flowers" style="width: 100%; border-radius: 8px;">
-    <h3 >single white rose flower</h3>
-    <h4 >Price: ₹30</h4>
-    <button onclick="placeorder()" >Buy Now</button>
-  </div>
-  <div class="card">
-    <img src="https://imgcdn.floweraura.com/vintage-dreams-of-velvet-petals-9743550flm-A_0.jpg" alt="Flowers" style="width: 100%; border-radius: 8px;">
-    <h3 >pink-white rose flower</h3>
-    <h4 >Price: ₹300</h4>
-    <button onclick="placeorder()" >Buy Now</button>
-</div>
-    <div class="card">
-    <img src="https://media.wishque.com/data/images/products/12869/thumbnail/56155946_316935723854_0.18091500-1749638722.jpg" alt="Flowers" style="width: 100%; border-radius: 8px;">
-    <h3 >red rose flower</h3>
-    <h4 >Price: ₹450</h4>
-    <button onclick="placeorder()" >Buy Now</button>
-  </div>
-  <div class="card">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/71-MIXs6jNL._AC_UL210_SR210,210_.jpg" alt="Flowers" style="width: 100%; border-radius: 8px;">
-    <h3 >pink rose gift hamper</h3>
-    <h4 >Price: ₹899</h4>
-    <button onclick="placeorder()" >Buy Now</button>
-  </div>
-  </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-    
-    <h2>about us</h2>
-    
-    <div class="text1">
-        <h4>welcome to our flower shop!</h4>
-        <p>at flower petalcart,we believe our that flowers have the power to brighten any day.our journey began in 2010 with a passion for floral design and a commitment to <br>providing the freshest blooms to our customers.</p>
-            
-    <h3>Our Values</h3>
-    <p>We are committed to:</p>
-    <ul>
-        <li><strong>Quality:</strong> We only use the freshest flowers and materials.</li>
-        <li><strong>Sustainability:</strong> We prioritize eco-friendly practices in our sourcing and packaging.</li>
-        <li><strong>Customer Satisfaction:</strong> Your happiness is our top priority, and we strive to exceed your expectations.</li>
-    </ul>
-    <h3>What We Offer</h3>
-    <ul>
-        <li>Weddings</li>
-        <li>Birthdays</li>
-        <li>Anniversaries</li>
-        <li>Funerals</li>
-        <li>Corporate Events</li>
-        <li>Seasonal Arrangements</li>
-    </ul>
-       <h2>Team</h2>
-    <div class="container">
-        <div class="team-card">
-            <img src="https://media.istockphoto.com/id/1162196281/photo/florist-watering-flower-plants.jpg?s=612x612&w=0&k=20&c=iO2yTpYh8Tu5Ij0kbpExsC0pLHTrWdVqpVG81Zxdp8g=" alt="sai" class="team-img">
-            <div class="team-info">
-                <h2 class="team-name">sai patil</h2>
-                <h5 class="team-title">Lead Florist</h5>
-                <h5>With 15 years of floral design experience, Sai specializes in rose cultivation and bouquets that wow.</h5>
-            </div>
-        </div>
-        
-        <div class="team-card">
-            <img src="https://media.istockphoto.com/id/589136876/photo/woman-buying-a-bouquet-of-flower.jpg?s=612x612&w=0&k=20&c=3iGlC4wyEvuHnfVtyEK32tk1Xl0iiQqYJ9d1VQF37YE=" alt="sahil" class="team-img">
-            <div class="team-info">
-                <h2 class="team-name">sahil mali</h2>
-                <h5 class="team-title">Head Gardener</h5>
-                <h5 >sahil's green thumb has nurtured our gardens for a decade, focusing on tulips and seasonal arrangements.</h5>
-            </div>
-        </div>
-        
-        <div class="team-card">
-            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ffbf7b63-6a3c-4a98-a29e-92df02a39b9a.png" alt="priya" class="team-img">
-            <div class="team-info">
-                <h2 class="team-name">priya mane</h2>
-                <h5 class="team-title">Floral Designer</h5>
-                <h5 >priya brings Latin floral traditions to her work, particularly in lily and orchid compositions.</h5>
-            </div>
-        </div>
-        </div>
-    </section>
 
 
-      <section id="reviews-container"class="reviews-container">
-        <h2>reviews</h2>
-        <div class="review-card">
-            <div class="review-header">
-                <div class="reviewer-name">Alex Johnson</div>
-                <div class="review-date">March 15, 2024</div>
-            </div>
-            <div class="rating">★★★★★</div>
-            <div class="review-text">
-               <p> This product exceeded my expectations! The quality is outstanding and it arrived sooner than expected.</p>
-            </div>
-        </div>
-        
-        <div class="review-card">
-            <div class="review-header">
-                <div class="reviewer-name">Sarah Miller</div>
-                <div class="review-date">February 28, 2024</div>
-            </div>
-            <div class="rating">★★★★☆</div>
-            <div class="review-text">
-              <p>  Very good product overall. The only thing I'd improve is the packaging - mine arrived slightly damaged.</p>
-            </div>
-        </div>
-         <div class="review-card">
-            <div class="review-header">
-                <div class="reviewer-name">radha pawar</div>
-                <div class="review-date">jan 30, 2024</div>
-            </div>
-            <div class="rating">★★★★☆</div>
-            <div class="review-text">
-              <p>  Very good product overall. quality is best ,i like the delivery service.</p>
-            </div>
-        </div>
-    </section>
-  
- 
-    
-<section  id="contact" class="contact">
-    
-    <script>
-    function sendToWhatsApp() {
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email").value;
-      var message = document.getElementById("message").value;
-
-      // Replace with your WhatsApp number (use country code, no + or 0)
-      var phoneNumber = "+918999512123";
-      
-      var url = "https://wa.me/+918999512123?text=" 
-          + encodeURIComponent("...petalcart ...\n\n" +
-          "i am "+name +"\n"+
-          "my  Email is:"+email+"\n"+
-          "message:"+message+"\n"
-          );
-
-
-      window.open(url, '_Self');
-    }
-  </script>
-   <h2>Contact us</h2>
-    
-   <form onsubmit="sendToWhatsApp(); return false;">
-        <input type="text" id="name"placeholder=" name" aria-label=" name" required>
-        <input id="email" placeholder=" email" aria-label=" email" required>
-        <textarea id="message"placeholder=" Message" aria-label="Message"></textarea>
-        <button onclick="sendMessage()">Send Message</button>
-    </form>
     <footer>
-        <h3>thank your for visite our site.</h3>
+        &copy; 2025 ShopEase. All rights reserved.
     </footer>
-</section>
-   
+      
+
 </body>
 </html>
